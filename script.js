@@ -1,19 +1,17 @@
 "use strict"
 
-// Практика JS 4
+// Практика JS 5
 
-let array = ["Саша", "Петя", "Оксана"];
+let firstNumber = +prompt("Введите первое число: ");
+let secondNumber = +prompt("Введите второе число: ");
 
-console.log("Исходный массив: " + array);
+if(firstNumber > secondNumber){
+    alert(+firstNumber + +secondNumber);
+}
+else if(firstNumber < secondNumber){
+    alert(secondNumber - firstNumber);
+}
+else{
+    alert("Числа одинаковые!");
+}
 
-let reverse_array = array.slice().reverse();
-reverse_array.splice(1,1,"Олег");
-
-console.log("Измененный массив: " + reverse_array);
-console.log("Исходный массив: " + array);
-
-array[0] = "Оксана";
-array[1] = "Олег";
-array[2] = "Саша";
-
-console.log("Измененный массив: " + array);
