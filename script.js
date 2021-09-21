@@ -1,7 +1,7 @@
 "use strict"
 
-// Практика JS 2
+// Практика JS 3
 
-let str = "HTML";
+let name = prompt("Введите ваше имя: ");
 
-console.log(str.toLowerCase());
+alert("Ваше имя: " + name);
