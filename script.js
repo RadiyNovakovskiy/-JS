@@ -1,10 +1,15 @@
 "use strict"
 
-// Практика JS 17
+// Практика JS 18
 
-const divisibleByThree = (number) => (number.split('').reduce((a, b) => parseInt(a)+parseInt(b))) % 3 == 0 ? true : false;
+function spacey(a){
+    let arr = new Array();
+    arr.push(a[0]);
+    for (let i=0; i<a.length-1; i++) {
+        arr.push(a[0] += a[i+1]);
+    }
+    return arr;
+}
 
-alert(divisibleByThree('19254'));
-alert(divisibleByThree('123'));
-alert(divisibleByThree('88'));
-alert(divisibleByThree('1'));
+alert(spacey(['kevin', 'has','no','space']));
+alert(spacey(['this','cheese','has','no','holes']));
