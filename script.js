@@ -1,15 +1,8 @@
 "use strict"
 
-// Практика JS 18
+// Практика JS 19
 
-function spacey(a){
-    let arr = new Array();
-    arr.push(a[0]);
-    for (let i=0; i<a.length-1; i++) {
-        arr.push(a[0] += a[i+1]);
-    }
-    return arr;
-}
+const evensAndOdds = (numm) => numm % 2 === 0 ? numm.toString(2) : numm.toString(16); 
 
-alert(spacey(['kevin', 'has','no','space']));
-alert(spacey(['this','cheese','has','no','holes']));
+alert(evensAndOdds(2));
+alert(evensAndOdds(13));
