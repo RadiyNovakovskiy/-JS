@@ -1,17 +1,18 @@
 "use strict"
 
-// Практика JS 6
+// Практика JS 7
 
-let array = ["10", "20", "30", "255", "3000"];
-let arr = [];
+let weight = prompt("Введите ваш вес: ");
+let recomendation = "";
 
-alert("Начальный массив: " + array);
+if(weight < 4){
+    recomendation = "Вам пора перекусить";
+}
+else if(weight >= 4 && weight <= 5.5 ){
+    recomendation = "Ваш вес в норме";
+}
+else{
+    recomendation = "Вам пора на тренировку";
+}
 
-array.forEach(item => {
-    if(item.startsWith('1') || item.startsWith('2') || item.startsWith('5')){
-        arr.push(item);
-    }    
-});
-alert("Итоговый массив: " + arr);
-
-
+alert(recomendation);
