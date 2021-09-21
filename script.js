@@ -1,8 +1,22 @@
 "use strict"
 
-// Практика JS 19
+// Практика JS 20
 
-const evensAndOdds = (numm) => numm % 2 === 0 ? numm.toString(2) : numm.toString(16); 
-
-alert(evensAndOdds(2));
-alert(evensAndOdds(13));
+let types = new function(a){
+    this.boolean = new Array();
+    this.number = new Array();
+    this.string = new Array();
+    a = [1, 2, 'a', 'b', true, false];
+    a.forEach(item => {
+        if(typeof(item) === "boolean"){
+            this.boolean.push(item);
+        }
+        else if(typeof(item) === "number"){
+            this.number.push(item);
+        }
+        else if (typeof(item) === "string"){
+            this.string.push(item);
+        }
+    });
+}
+console.log(types);
