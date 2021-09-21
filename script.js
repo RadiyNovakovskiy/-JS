@@ -1,11 +1,17 @@
 "use strict"
 
-// Практика JS 13
+// Практика JS 14
 
-const hexToDec = (str) => parseInt(str, 16);
+const remove = (string, n) => string.replace(/!/g, match => n --> 0 ? '' : match);
 
-alert(hexToDec('-C'));
-alert(hexToDec('a'));
-alert(hexToDec('1'));
-alert(hexToDec('10'));
-alert(hexToDec('FF'));
+alert(remove("Hi!", 1));
+alert(remove("Hi!",100));
+alert(remove("Hi!!!",1));
+alert(remove("Hi!!!",100));
+alert(remove("!Hi",1));
+alert(remove("!Hi!",1));
+alert(remove("!Hi!",100));
+alert(remove("!!!Hi !!hi!!! !hi",1));
+alert(remove("!!!Hi !!hi!!! !hi",3));
+alert(remove("!!!Hi !!hi!!! !hi",5));
+alert(remove("!!!Hi !!hi!!! !hi",100));
