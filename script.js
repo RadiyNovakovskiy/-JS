@@ -1,11 +1,8 @@
 "use strict"
 
-// Практика JS 15
+// Практика JS 16
 
-const maxDiff = (mass) =>  mass.length <=1 ? 0 : Math.max(...mass) - Math.min(...mass);
+const getLongWords = (words, n) => words.split(' ').filter(word => word.length > n);
 
-alert(maxDiff([0, 1, 2, 3, 4, 5, 6]));
-alert(maxDiff([-0, 1, 2, -3, 4, 5, -6]));
-alert(maxDiff([0, 1, 2, 3, 4, 5, 16]));
-alert(maxDiff([16]));
-alert(maxDiff([]));
+alert(getLongWords('Сегодня отличный день. С самого утра мы пойдем на озеро, купаться.', 5));
+alert(getLongWords('Над городом облака, коридоры, берега, проспект, река.', 7));
