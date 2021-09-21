@@ -1,11 +1,9 @@
 "use strict"
 
-// Практика JS 11
+// Практика JS 12
 
-const difference = (arr1, arr2) => (arr1.reduce((a, b) => a*b))-(arr2.reduce((a, b) => a*b));
+const between = (start, end) => Array(end - start + 1).fill().map((a, index) => start + index);
 
-alert(difference([3, 2, 5], [1, 4, 4]));
-alert(difference([9, 7, 2], [5, 2, 2]));
-alert(difference([11, 2, 5], [1, 10, 8]));
-alert(difference([4, 4, 7], [3, 9, 3]));
-alert(difference([15, 20, 25], [10, 30, 25]));
+alert(between(1, 4));
+alert(between(-2, 2));
+alert(between(20, 25));
