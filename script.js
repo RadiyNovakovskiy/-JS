@@ -1,17 +1,11 @@
 "use strict"
 
-// Практика JS 14
+// Практика JS 15
 
-const remove = (string, n) => string.replace(/!/g, match => n --> 0 ? '' : match);
+const maxDiff = (mass) =>  mass.length <=1 ? 0 : Math.max(...mass) - Math.min(...mass);
 
-alert(remove("Hi!", 1));
-alert(remove("Hi!",100));
-alert(remove("Hi!!!",1));
-alert(remove("Hi!!!",100));
-alert(remove("!Hi",1));
-alert(remove("!Hi!",1));
-alert(remove("!Hi!",100));
-alert(remove("!!!Hi !!hi!!! !hi",1));
-alert(remove("!!!Hi !!hi!!! !hi",3));
-alert(remove("!!!Hi !!hi!!! !hi",5));
-alert(remove("!!!Hi !!hi!!! !hi",100));
+alert(maxDiff([0, 1, 2, 3, 4, 5, 6]));
+alert(maxDiff([-0, 1, 2, -3, 4, 5, -6]));
+alert(maxDiff([0, 1, 2, 3, 4, 5, 16]));
+alert(maxDiff([16]));
+alert(maxDiff([]));
