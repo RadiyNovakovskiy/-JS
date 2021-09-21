@@ -1,9 +1,11 @@
 "use strict"
 
-// Практика JS 12
+// Практика JS 13
 
-const between = (start, end) => Array(end - start + 1).fill().map((a, index) => start + index);
+const hexToDec = (str) => parseInt(str, 16);
 
-alert(between(1, 4));
-alert(between(-2, 2));
-alert(between(20, 25));
+alert(hexToDec('-C'));
+alert(hexToDec('a'));
+alert(hexToDec('1'));
+alert(hexToDec('10'));
+alert(hexToDec('FF'));
