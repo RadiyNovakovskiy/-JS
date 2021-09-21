@@ -1,8 +1,10 @@
 "use strict"
 
-// Практика JS 16
+// Практика JS 17
 
-const getLongWords = (words, n) => words.split(' ').filter(word => word.length > n);
+const divisibleByThree = (number) => (number.split('').reduce((a, b) => parseInt(a)+parseInt(b))) % 3 == 0 ? true : false;
 
-alert(getLongWords('Сегодня отличный день. С самого утра мы пойдем на озеро, купаться.', 5));
-alert(getLongWords('Над городом облака, коридоры, берега, проспект, река.', 7));
+alert(divisibleByThree('19254'));
+alert(divisibleByThree('123'));
+alert(divisibleByThree('88'));
+alert(divisibleByThree('1'));
