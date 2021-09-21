@@ -1,18 +1,28 @@
 "use strict"
 
-// Практика JS 7
+// Практика JS 8
 
-let weight = prompt("Введите ваш вес: ");
-let recomendation = "";
+function finalGrade(examMark, projectCount){
+    let mark = 0;
+    if(examMark > 90 || projectCount > 10){
+        mark = 100;
+    }
+    else if(examMark > 75 || projectCount > 5){
+        mark = 90;
+    }
+    else if(examMark > 50 || projectCount > 2){
+        mark = 75;
+    }
+    else{
+        mark = 0;
+    }
+    return mark;
+}
 
-if(weight < 4){
-    recomendation = "Вам пора перекусить";
-}
-else if(weight >= 4 && weight <= 5.5 ){
-    recomendation = "Ваш вес в норме";
-}
-else{
-    recomendation = "Вам пора на тренировку";
-}
-
-alert(recomendation);
+alert("Ваша оценка: " + finalGrade(100, 12));
+alert("Ваша оценка: " + finalGrade(99, 0));
+alert("Ваша оценка: " + finalGrade(10, 15));
+alert("Ваша оценка: " + finalGrade(85, 5));
+alert("Ваша оценка: " + finalGrade(55, 3));
+alert("Ваша оценка: " + finalGrade(55, 0));
+alert("Ваша оценка: " + finalGrade(20, 2));
