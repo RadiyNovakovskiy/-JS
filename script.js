@@ -1,17 +1,17 @@
 "use strict"
 
-// Практика JS 5
+// Практика JS 6
 
-let firstNumber = +prompt("Введите первое число: ");
-let secondNumber = +prompt("Введите второе число: ");
+let array = ["10", "20", "30", "255", "3000"];
+let arr = [];
 
-if(firstNumber > secondNumber){
-    alert(+firstNumber + +secondNumber);
-}
-else if(firstNumber < secondNumber){
-    alert(secondNumber - firstNumber);
-}
-else{
-    alert("Числа одинаковые!");
-}
+alert("Начальный массив: " + array);
+
+array.forEach(item => {
+    if(item.startsWith('1') || item.startsWith('2') || item.startsWith('5')){
+        arr.push(item);
+    }    
+});
+alert("Итоговый массив: " + arr);
+
 
