@@ -1,11 +1,11 @@
 "use strict"
 
-// Практика JS 10
+// Практика JS 11
 
-const unwantedNames = ["Дима", "Саша", "Ольга", "Никита"];
+const difference = (arr1, arr2) => (arr1.reduce((a, b) => a*b))-(arr2.reduce((a, b) => a*b));
 
-const deleteNames = (array) => array = array.filter(item => !unwantedNames.includes(item));
-
-console.log(deleteNames(['Никита', 'Саша', 'Анастасия', 'Дима', 'Саныч', 'Ольга', ]));
-console.log(deleteNames(['Алексей', 'Семён', 'Василиса', 'Дима', 'Максим', 'Ольга', ]));
-console.log(deleteNames(['Алишер', 'Ольга', ]));
+alert(difference([3, 2, 5], [1, 4, 4]));
+alert(difference([9, 7, 2], [5, 2, 2]));
+alert(difference([11, 2, 5], [1, 10, 8]));
+alert(difference([4, 4, 7], [3, 9, 3]));
+alert(difference([15, 20, 25], [10, 30, 25]));
